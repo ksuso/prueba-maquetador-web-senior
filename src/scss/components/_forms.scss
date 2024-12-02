@@ -1,0 +1,209 @@
+@use '../settings' as *;
+@use "sass:math";
+
+@if $forms == true {
+
+form {
+	width: clamp(290px, 100%, 600px);
+	margin: 0 auto;
+}
+fieldset {
+	border: none;
+}
+legend {
+	font-size: $h2;
+	font-family: heading;
+	color: var(--color-c3);
+	padding-inline-start: 0;
+	padding-inline-end: 0;
+	margin-bottom: 1em;
+}
+label {
+	display: block;
+	color: var(--color-txt);
+	font-size: $font-size;
+	line-height: $line-height-small;
+  text-align: left;
+	border-radius: $input-border-radius;
+	z-index: map-get($z-index, 1);
+}
+input,
+select,
+textarea{
+	background-color: #254E7E17;
+	color: var(--color-bk);
+	border-width: $input-border-width;
+	border-style: $input-border-style;
+	border-color: none;
+	border-radius: 10px;
+	font-size: $input-font-size;
+	padding: $input-paddHeight $input-paddWidth;
+	margin-block-end: 1.5em;
+	:invalid {
+		border: 2px solid red;
+	}
+}
+textarea {
+	width: 100%;
+	height: 100px;
+	resize: none;
+	padding: 1em;
+}
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="search"] {
+	width: 100%;
+	height: $input-height;
+	margin-block-end: 1.5em;
+}
+input[type="range"] {
+	padding: $input-paddHeight+.1 0;
+}
+
+select {
+	appearance: none;
+	//background-image: url(icons/chevron-down.svg);
+	background-size: $icoWidth-small;
+	background-repeat: no-repeat;
+	background-position: 97%;
+	width: 100%;
+}
+
+.containerSearch::after {
+	content: "";
+	//background-image: url('icons/search.svg');
+	background-size: $icoWidth-small;
+	height: $icoHeight-small;
+	width: $icoWidth-small;
+	position: absolute;
+	top: 35px;
+	right: 18px;
+	pointer-events: none;
+}
+
+::placeholder {
+	color: var(--color-gy-d);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	box-shadow: 0 0 0px 1000px var(--color-bg) inset;
+}
+
+.form-alert {
+	color: var(--color-error);
+	font-size: $font-size;
+}
+
+/*CUSTOM CHECKBOX AND RADIO BUTTONS*/
+input[type="checkbox"],
+input[type="radio"]{
+	display: none;
+	+ label{
+		position: relative;
+		top: 0;
+		padding: 0;
+		margin-left: 0;
+		margin-bottom: 5px;
+		line-height: 1em;
+		&::before {
+			content:"";
+			width: $custom-checkbox-size;
+			height: $custom-checkbox-size;
+			display: inline-block;
+			vertical-align: bottom;
+			margin-right: 5px;
+			background-color: var(--color-bg);
+			outline-color: var(--color-txt);
+			outline-width: $custom-checkbox-border-width;
+			outline-style: $border-style;
+			border-radius: $custom-checkbox-border-radius;
+		}
+	}
+}
+input[type="checkbox"]:checked + label::before {
+	background-color: var(--color-c1);
+}
+input[type="checkbox"]:checked + label::after {
+	content: '';
+	display: block;
+	background-image: url(../../assets/icons/check.svg);
+  background-size: 35px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: -13px;
+  left: -6px;
+}
+input[type="radio"] + label::before {
+	border-radius: 50%;
+}
+input[type="radio"]:checked + label::before {
+	background-color: var(--color-c1);
+}
+input:not([class="toggle"])[type="radio"]:checked + label::after {
+	content: "";
+	width: math.div($custom-checkbox-size, 2);
+	height: math.div($custom-checkbox-size, 2);
+	border-radius: 50%;
+	background-color: var(--color-bk);
+	position: absolute;
+	top: 6px;
+	left: 5px;
+}
+
+/*CUSTOM TOOGLE RADIO BUTTONS*/
+.box-toggle {
+	display: inline-table;
+}
+input.toggle + label {
+	padding: $input-paddHeight $input-paddWidth;
+	margin-right: -10px;
+	display: inline-block;
+	min-width: 80px;
+	text-align: center;
+	span {
+		position: relative;
+		z-index: map-get($z-index, 2);
+	}
+	&::before{
+		content:"";
+		width: 100%;
+		height: 100%;
+		display: block;
+		outline-width: $input-border-width;
+		outline-style: $border-style;
+		border-radius: 0;
+		background-color: var(--color-bg);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: map-get($z-index, 1);
+	}
+}
+input.toggle:first-of-type + label::before {
+	border-radius: $border-radius 0 0 $border-radius;
+}
+input.toggle:last-of-type + label::before {
+	border-radius: 0 $border-radius $border-radius 0;
+}
+input.toggle:checked + label {
+	color: var(--color-bk);
+	font-weight: bold;
+	&::before {
+		background-color: var(--color-c1);
+		border-color: var(--color-txt);
+	}
+}
+
+}

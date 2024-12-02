@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@charset 'utf-8';
+
+@forward 'scss/base';
+@forward 'scss/utilities';
+@forward 'scss/layout/header';
+@forward 'scss/layout/nav';
+@forward 'scss/components';
+@forward 'scss/layout/footer';

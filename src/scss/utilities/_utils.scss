@@ -1,0 +1,131 @@
+@use '../settings' as *;
+@use "sass:math";
+%flex{
+	display:flex;
+	flex-wrap:wrap;
+}
+$flexElements: (
+   "flex": flex-start,
+   "flex--center": center,
+   "flex--end": flex-end,
+   "flex--between": space-between,
+   "flex--around": space-around,
+   "flex--evenly": space-evenly
+);
+@each $nameFlex, $valorJustify in $flexElements {
+   .#{$nameFlex} {
+      @extend %flex;
+      justify-content: $valorJustify;
+   }
+}
+.direction-column{	flex-direction:column;}
+.items-center{ align-items:center;}
+.items-start{	align-items:start;}
+.items-end{ align-items:end;}
+.self-center{ align-self:center;}
+.self-flex-start{	align-self:flex-start;}
+.self-flex-end{ align-self:flex-end;}
+.nowrap{	flex-wrap:nowrap;}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+.txtc{ text-align:center;}
+.txtr{ text-align:right;}
+.txtl{ text-align:left;}
+
+.floatl{	float:left;}
+.floatr{	float:right;}
+.clearfix{ clear:both;}
+
+.hide { display: none !important}
+.show, .block{	display:block !important}
+.fixed { position: fixed !important}
+
+.block-scroll{
+	overflow: hidden;
+	height: 100%;
+}
+ul.type-none {
+	list-style-type: none;
+}
+
+%ico{
+	vertical-align:middle;
+	fill: var(--color-c1);
+}
+.ico{
+	@extend %ico;
+	width: $icoWidth;
+	height: $icoHeight;
+	@media(max-width: map-get($media, "s")){
+		width: math.div($icoWidth, 1.4);
+		height: math.div($icoHeight, 1.4);
+	}
+}
+.ico--small{
+	@extend %ico;
+	width: $icoWidth-small;
+	height: $icoHeight-small;
+}
+
+@for $w from 1 through 20 {
+	.w#{$w*5} {
+		width: 100%;
+		@media (min-width: map-get($media, "m")){
+			width: $w*5%;
+		}
+	}
+}
+
+@for $p from 1 through 5 {
+	.p#{$p*1} {
+		padding: $p*1rem;
+	}
+}
+@for $pl from 1 through 5 {
+	.pl#{$pl*1} {
+		padding-left: $pl*1rem;
+	}
+}
+@for $pr from 1 through 5 {
+	.pr#{$pr*1} {
+		padding-right: $pr*1rem;
+	}
+}
+@for $pt from 1 through 5 {
+	.pt#{$pt*1} {
+		padding-top: $pt*1rem;
+	}
+}
+@for $pb from 1 through 5 {
+	.pb#{$pb*1} {
+		padding-bottom: $pb*1rem;
+	}
+}
+@for $m from 1 through 5 {
+	.m#{$m*1} {
+		margin: $m*1rem;
+	}
+}
+@for $ml from 1 through 5 {
+	.ml#{$ml*1} {
+		margin-left: $ml*1rem;
+	}
+}
+@for $mr from 1 through 5 {
+	.mr#{$mr*1} {
+		margin-right: $mr*1rem;
+	}
+}
+@for $mt from 1 through 5 {
+	.mt#{$mt*1} {
+		margin-top: $mt*1rem;
+	}
+}
+@for $mb from 1 through 5 {
+	.mb#{$mb*1} {
+		margin-bottom: $mb*1rem;
+	}
+}

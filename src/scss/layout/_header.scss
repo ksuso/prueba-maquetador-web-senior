@@ -1,0 +1,111 @@
+@use '../settings' as *;
+@use '../utilities/mixins';
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--color-txt);
+  padding: 30px 24px;
+	@include mixins.limitsWidth($min-width, $width, $max-width);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: map-get($z-index, 1 );
+  @media (min-width: map-get($media, "l")){
+    padding: 30px 0;
+  }
+  &.header--fixed {
+    position: fixed;
+  }
+  .header__logo {
+    display: block;
+    width: 50%;
+    max-width: 313px;
+    min-width: 157px;
+    position: relative;
+    z-index: map-get($z-index, 2 );
+    @media (min-width: map-get($media, "m")){
+      display: inline-block;
+    }
+    svg {
+      width: 100%;
+    }
+  }
+  .header__nav {
+    display: block;
+    transition: all var(--animOut-duration) ease-in-out;
+    @media (min-width: map-get($media, "m")){
+      display: block;
+    }
+    a {
+      display: none;
+      font-weight: 600;
+      color: var(--color-wh);
+      text-decoration: none;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      @media (min-width: map-get($media, "m")){
+        display: inline-block;
+      }
+    }
+    &--mobileOpen {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-wh);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 10vh;
+      transition: all var(--animIn-duration) ease-in-out;
+      a {
+        display: block;
+        width: fit-content;
+        color: var(--color-txt);
+        text-decoration: none;
+        margin: 30px;
+        &.active {
+          color: var(--color-c1);
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-c1);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.btn-hamburger-menu {
+	display: block;
+  position: absolute;
+  top: 38px;
+  right: 24px;
+  z-index: map-get($z-index, 1 );
+  @media (min-width: map-get($media, "m")){
+    display: none;
+  }
+  .btnMenu {
+    display: block;
+    &.btnMenu--hide {
+      display: none;
+    }
+  }
+  .btnClose {
+    display: none;
+    &.btnClose--show {
+      display: block;
+      position: fixed;
+      right: 30px
+    }
+  }
+}

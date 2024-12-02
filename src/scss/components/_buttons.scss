@@ -1,0 +1,139 @@
+@use '../settings' as *;
+
+%btn {
+	width: initial;
+	border: $button-border-width $button-border-style;
+	border-radius: $button-border-radius;
+	padding: 0 $button-paddWidth;
+	font-size: $button-font-size;
+	line-height: $line-height-small;
+	transition: var(--animOut-duration) ease-in-out;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		transition: var(--animIn-duration) ease-in-out;
+    svg:last-child {
+      transform: translateX(6px) translateY(-3px);;
+      transition: transform var(--animIn-duration) ease-in-out;
+    }
+    .plane {
+      transform: translateX(7px) translateY(-6px);;
+      transition: transform var(--animIn-duration) ease-in-out;
+    }
+	}
+	&:active {
+		transition: none;
+	}
+	&:disabled {
+		background-color: var(--color-gy-l);
+	}
+  svg:first-child {
+    margin-right: 10px;
+    &.icoPlane {
+      margin-right: 0;
+    }
+  }
+  svg:last-child {
+    margin-left: 10px;
+    transform: translateX(0) translateY(-3px);
+    transition: transform var(--animOut-duration) ease-in-out;
+  }
+  span {
+    display: inline-block;
+    margin: 20px 0;
+  }
+  .plane {
+    transform: translateX(0) translateY(-3px);
+    transition: transform var(--animOut-duration) ease-in-out;
+  }
+}
+%btn2 {
+	width: initial;
+	border: $button-border-width $button-border-style;
+	border-radius: $button-border-radius;
+	padding: $button-paddHeight/2  $button-paddWidth;
+	font-size: $button-font-size;
+	line-height: $line-height-small;
+	transition: var(--animOut-duration) ease-in-out;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		transition: var(--animIn-duration) ease-in-out;
+	}
+	&:active {
+		transition: none;
+	}
+	&:disabled {
+		background-color: var(--color-gy-l);
+	}
+}
+%btn--primary-color {
+	background-color: var(--color-c1);
+	border-color: var(--color-c1);
+	color: var(--color-wh);
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: var(--color-c1);
+		border-color: var(--color-c1);
+		color: var(--color-wh);
+	}
+}
+%btn--secondary-color {
+	background-color: var(--color-gy);
+	border-color: var(--color-gy);
+	color: var(--color-bk);
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: var(--color-gy);
+		border-color: var(--color-gy);
+		color: var(--color-bk);
+	}
+}
+%btn--secondary-color2 {
+	background-color: transparent;
+	border-color: var(--color-gy-d);
+	color: var(--color-bk);
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		border-color: var(--color-c1);
+		color: var(--color-bk);
+	}
+}
+%btn--disable-color {
+	background-color: var(--color-gy-l);
+	border-color: var(--color-gy-l);
+	color: var(--color-gy-d);
+	opacity: .6;
+	transition: none;
+	cursor: not-allowed;
+	&:hover,
+	&:focus {
+		transition: none;
+		color: var(--color-gy-d);
+	}
+}
+
+.btn--primary {
+	@extend %btn;
+	@extend %btn--primary-color;
+}
+.btn--primary2 {
+	@extend %btn2;
+	@extend %btn--primary-color;
+}
+.btn--secondary {
+	@extend %btn2;
+	@extend %btn--secondary-color;
+}
+.btn--secondary2 {
+	@extend %btn2;
+	@extend %btn--secondary-color2;
+}
+.btn--disabled {
+	@extend %btn;
+	@extend %btn--disable-color;
+}

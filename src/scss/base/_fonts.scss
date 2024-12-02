@@ -1,0 +1,33 @@
+@font-face {
+	font-family: heading;
+	font-display: swap;
+	src:	local('OpenSans-Bold'),
+			url('../../assets/fonts/OpenSans-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: principal;
+	font-display: swap;
+	src:	local('OpenSans-Regular'),
+			url('../../assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: complementaryBold;
+	font-display: swap;
+	font-weight: 700;
+	src:	local('PlusJakartaSans-VariableFont_wght'),
+			url('../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+	font-family: complementary;
+	font-display: swap;
+	font-weight: 400;
+	src:	local('PlusJakartaSans-VariableFont_wght'),
+			url('../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+	font-family: complementary2;
+	font-display: swap;
+	font-weight: 500;
+	src:	local('PlusJakartaSans-VariableFont_wght'),
+			url('../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}

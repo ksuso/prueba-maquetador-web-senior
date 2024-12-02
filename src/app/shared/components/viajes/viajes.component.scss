@@ -1,0 +1,67 @@
+@use './../../../../scss/settings' as *;
+
+.shop {
+  &__btnHeart {
+    background-color: var(--color-wh);
+    color: var(--color-c1);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    svg {
+      position: absolute;
+      top: 9px;
+      left: 7px;
+      stroke: var(--color-c1);
+      fill: var(--color-wh);
+      transition: all var(--animOut-duration) ease-in-out;
+    }
+    &:hover {
+      svg {
+        fill: var(--color-c1);
+        transition: all var(--animIn-duration) ease-in-out;
+      }
+    }
+  }
+  &__card {
+    background-color: var(--color-wh);
+    text-align: left;
+    > div {
+      padding: .5em 1em 1em 1em;
+    }
+    h4 {
+      font-size: 20px;
+      line-height: 28px;
+      color: var(--color-txt);
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 14px;
+      line-height: 19.6px;
+      margin-bottom: 1em;
+    }
+  }
+  &__tags {
+    margin-bottom: 1em;
+    span {
+      font-size: 12px;
+      background-color: var(--color-gy);
+      padding: 2px 8px;
+      border-radius: 48px;
+      margin-right: 8px;
+    }
+  }
+  &__date {
+    font-size: 12px;
+    margin-bottom: 1em;
+  }
+  &__price {
+    margin-bottom: 1em;
+    span:last-child {
+      font-size: 20px;
+      font-family: heading;
+    }
+  }
+}

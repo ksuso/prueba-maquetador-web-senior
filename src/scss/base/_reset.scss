@@ -1,0 +1,50 @@
+@use '../settings' as *;
+
+:root {
+	--animIn-duration: #{$timeIn};
+	--animOut-duration: #{$timeOut};
+  --anim-iteration-count: 1;
+  --scroll-behavior: smooth;
+	@media (prefers-reduced-motion: reduce) {
+		--animIn-duration: 0.01ms;
+		--animOut-duration: 0.01ms;
+		--anim-iteration-count: 1;
+		--scroll-behavior: auto;
+	}
+}
+:root,
+.light-bg {
+	@each $color, $valueColor in $colors-light {
+		--color-#{$color}: #{$valueColor};
+	}
+}
+
+.dark-bg {
+	@each $color, $valueColor in $colors-dark {
+		--color-#{$color}: #{$valueColor};
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+img, video {
+  display: inline-block;
+  max-width: 100%;
+	height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+div,section {
+	position: relative;
+}

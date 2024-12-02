@@ -1,0 +1,27 @@
+@use '../settings' as *;
+
+a, button {
+	text-decoration: underline;
+	color: var(--color-txt);
+	transition: var(--animOut-duration) ease-in-out;
+	&:hover,
+	&:focus {
+		transition: var(--animIn-duration) ease-in-out;
+		color: var(--color-gy-d);
+	}
+	&:active {
+		transition: none;
+		color: var(--color-c1);
+	}
+	svg {
+		fill: var(--color-c1);
+		vertical-align: text-bottom;
+	}
+}
+a {
+	&.btn--primary,
+	&.btn--secondary,
+	&.btn--disabled {
+		display: inline-block;
+	}
+}

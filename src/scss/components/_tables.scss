@@ -1,0 +1,66 @@
+@use '../settings' as *;
+
+@if $tables == true {
+
+.tableContainer {
+	overflow-x: auto;
+	table {
+    font-family: complementary;
+		border-collapse: collapse;
+		width: $table-width;
+		max-width: $table-max-width;
+    min-width: 660px;
+		thead {
+			tr {
+				height: $table-header-height;
+        font-family: complementaryBold;
+				th {
+					text-align: center;
+					padding: $table-paddHeight $table-paddWidth;
+          border-bottom: 2px solid var(--color-gy-d);
+          &:not(:first-child){
+            border-left: 2px solid var(--color-gy-d);
+          }
+          p:first-child {
+            font-size: 17px;
+          }
+          p:nth-child(2) {
+            font-size: 28px;
+            margin-top: 8px;
+            margin-bottom: 18px;
+          }
+				}
+			}
+		}
+		tbody {
+			tr {
+				height: $table-row-height;
+				&:nth-child(even){
+					background-color: transparent;
+				}
+				&:nth-child(odd) {
+					background-color: transparent;
+				}
+				td {
+					padding: $table-paddHeight $table-paddWidth;
+          border-bottom: 2px solid var(--color-gy-d);
+          font-size: 20px;
+          width: 25%;
+          &:not(:first-child) {
+            text-align: center;
+            border-left: 2px solid var(--color-gy-d);
+          }
+				}
+			}
+		}
+    .btn--primary2, .btn--secondary2 {
+      font-family: complementary2;
+      font-size: 15px;
+      font-weight: lighter;
+      display: block;
+      width: 100%;
+    }
+	}
+}
+
+}

@@ -1,0 +1,222 @@
+@use './../../../scss/settings' as *;
+
+.banner {
+  background-image: url("../../../assets/images/ImageHolder.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  height: 90vh;
+  padding: 0 24px;
+    @media (min-width: map-get($media, "l")){
+      margin-bottom: 80px;
+      padding: 0;
+    }
+  &::before {
+    content: "";
+    background-color: rgba(0,0,0, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;;
+  }
+  h1, h2, p {
+    color: var(--color-wh);
+    margin: 25px auto;
+  }
+
+  h2 {
+    @media (max-width: map-get($media, "m")){
+      font-family: principal;
+      font-weight: normal;
+    }
+  }
+  .lineIcon {
+    max-width: 1144px;
+  }
+}
+
+.destinations {
+  &__photos {
+    padding: 0 24px;
+    @media (min-width: map-get($media, "s")){
+      text-align: center;
+    }
+    @media (min-width: map-get($media, "l")){
+      margin-bottom: 80px;
+      padding: 0;
+    }
+  }
+  &__principalText {
+    width: min(100%, 660px);
+    margin: 0 auto;
+  }
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 24px;
+    div {
+      width: 100%;
+      height: 288px;
+      border-radius: $border-radius;
+      overflow: hidden;
+      &:nth-child(n+4) {
+        display: none;
+      }
+      img {
+        max-width: inherit;
+        object-fit: contain;
+        height: 100%;
+        transform: translateX(-23%);
+      }
+    }
+    @media (min-width: map-get($media, "xs")){
+      grid-template-columns: repeat(6, 1fr);
+      gap: 24px;
+      div {
+        img {
+          transform: translateX(-30%);
+        }
+        &:first-child {
+          grid-column: span 6;
+        }
+        &:nth-child(2) {
+          grid-column: span 3;
+        }
+        &:nth-child(3) {
+          grid-column: span 3;
+        }
+        &:nth-child(n+4) {
+          grid-column: span 2;
+          display: block;
+        }
+      }
+    }
+    @media (min-width: map-get($media, "s")){
+      div {
+        img {
+          transform: translateX(-19%);
+        }
+      }
+    }
+    @media (min-width: map-get($media, "m")){
+      div {
+        img {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  &__places {
+    padding: 0 24px;
+    margin-bottom: 36px;
+    @media (min-width: map-get($media, "xs")){
+      padding: 0;
+      margin-bottom: 0;
+    }
+    > div {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      &:last-child {
+        aspect-ratio: 4/3;
+        margin-top: 24px;
+        border-radius: 20px;
+         @media (min-width: map-get($media, "xs")){
+          border-radius: 0;
+          margin-top: 0;
+        }
+      }
+      > div {
+        width: 100%;
+        margin: 0 auto;
+      }
+      img {
+        max-width: inherit;
+        object-fit: contain;
+        position: absolute;
+        right: 0;
+      }
+      @media (min-width: map-get($media, "xs")){
+        width: 50%;
+        height: 411px;
+        align-items: center;
+        border-radius: 0px;
+        > div {
+          width: 70%;
+        }
+      }
+    }
+    @media (min-width: map-get($media, "xs")){
+      &:nth-child(2) {
+        > div:first-child {
+          order:2;
+        }
+      }
+    }
+  }
+}
+
+.shop {
+  padding: 0 24px;
+  margin-bottom: 36px;
+  @media (min-width: map-get($media, "s")){
+    text-align: center;
+  }
+  @media (min-width: map-get($media, "l")){
+    padding: 0;
+    margin-bottom: 80px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(312px, 318px));
+    gap: 24px;
+  }
+  &__principalText {
+    width: min(100%, 660px);
+    margin: 0 auto 2em auto;
+  }
+}
+
+.pricing {
+  padding: 5em 0 4em 24px;
+  background-color: var(--color-c2);
+  @media (min-width: map-get($media, "s")){
+    text-align: center;
+  }
+  @media (min-width: map-get($media, "l")){
+    padding: 5em 0 4em 0;
+    margin-bottom: 80px;
+  }
+}
+
+.contact {
+  padding: 0 24px;
+  @media (min-width: map-get($media, "s")){
+    text-align: center;
+  }
+  @media (min-width: map-get($media, "l")){
+    padding: 0;
+    margin-bottom: 80px;
+  }
+  img {
+    border-radius: 20px;
+  }
+  p {
+    width: min(100%, 660px);
+    margin: 0 auto 3em auto;
+  }
+  form {
+    padding: 3%;
+    width: 100%;
+    min-width: 300px;
+    max-width: 760px;
+    @media (min-width: map-get($media, "m")){
+      width: 50%;
+    }
+  }
+}

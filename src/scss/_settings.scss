@@ -1,0 +1,147 @@
+// COLOR BACKGROUNDS
+$colors-light: (
+	bg: #f3f3f3,
+	txt: #343434,
+	link: #8A42FB,
+	linkhover: #f7ef06,
+	wh: #ffffff,
+	bk: #343434,
+	c1: #8A42FB,
+  c2: #EFF3FB,
+	gy: #f3f3f3,
+  gy-d: #CDCDCD,
+	error: hsl(356, 90%, 52%),
+	warning: hsl(39, 96%, 43%),
+	success: hsl(88, 100%, 43%),
+	info: hsl(191, 96%, 38%)
+);
+
+$colors-dark: (
+  bg: #343434,
+	txt: #ffffff,
+	link: #8A42FB,
+	linkhover: #f7ef06,
+	wh: #343434,
+	bk: #ffffff,
+	c1: #8A42FB,
+  c2: #EFF3FB,
+	gy: #f3f3f3,
+  gy-d: #CDCDCD,
+	error: hsl(356, 90%, 52%),
+	warning: hsl(39, 96%, 43%),
+	success: hsl(88, 100%, 43%),
+	info: hsl(191, 96%, 38%)
+);
+// MEDIA QUERIES
+$media: (
+	xl: 1460px,
+	l: 1344px,
+	m: 1024px,
+	s: 768px,
+	xs: 557px,
+	xxs: 430px
+);
+// Z-INDEX
+$z-index: (
+	5: 50,
+	4: 40,
+	3: 30,
+	2: 20,
+	1: 10,
+	0: -1
+);
+
+// RENDER SELECTION
+
+//components
+$buttons: true;
+$forms: true;
+$links: true;
+$lists: true;
+$tables: true;
+
+//layout
+$footer: true;
+$header: true;
+$nav: true;
+
+// SITE SETTINGS
+$font-size-standard: 16px;
+
+$width: 100%;
+$max-width: 1344px;
+$min-width: 312px;
+
+//$h1: calc(4vmin + 1em);
+$h1: calc(4vmin + 1em);
+$h2: calc(2vmin + 1em);
+$h3: calc(1.5vmin + 1.2em);
+$h4: calc(1vmin + 1em);
+$h5: calc(1vmin + 1em);
+$h6: calc(1vmin + 0.9em);
+
+$h1type2: calc(2.5vmin + 1em);
+$h2type2: calc(2.1vmin + 1em);
+$h3type2: calc(1.2vmin + 1em);
+$h4type2: calc(1vmin + 1em);
+$h5type2: calc(1vmin + 1em);
+$h6type2: calc(1vmin + 0.9em);
+
+$font-size: 1em;
+$font-size-small: .74em;
+
+$line-height: 1.5em;
+$line-height-small: 1.2em;
+
+$margin-between-paragraphs: 1em;
+
+$list-style-position: inside;
+$list-style-type: circle;
+
+$border-width: 1px;
+$border-style: solid;
+$border-radius: 20px;
+
+$icoWidth: 40px;
+$icoHeight: 40px;
+$icoWidth-small: 25px;
+$icoHeight-small: 25px;
+
+$timeIn: 0.3s;
+$timeOut: 0.5s;
+
+// BUTTONS
+$button-font-size: $font-size;
+$button-border-width: 1px;
+$button-border-style: solid;
+$button-border-radius: 10px;
+$button-paddHeight: 20px;
+$button-paddWidth: 20px;
+
+// FORMS
+$include-animate-inputs: false;
+$input-font-size: $font-size;
+$input-border-width: 0;
+$input-border-style: solid;
+$input-border-radius: 10px;
+$input-height: 48px;
+$input-paddHeight: 12px;
+$input-paddWidth: 12px;
+
+$custom-checkbox-size: 16px;
+$custom-checkbox-border-width: 2px;
+$custom-checkbox-border-radius: 2px;
+
+// TABLES
+$table-width: 100%;
+$table-max-width: 1344px;
+$table-header-height: 160px;
+$table-row-height: 72px;
+$table-paddWidth: 10px;
+$table-paddHeight: 5px;
+$table-border-width: 1px;
+$table-border-style: solid;
+
+//FOOTER
+$footer-column-width: 25%;
+$footer-column-max-width: 215px;

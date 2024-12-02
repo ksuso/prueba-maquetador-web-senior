@@ -1,0 +1,41 @@
+@use '../settings' as *;
+
+@if $lists == true {
+
+dl, ul, ol {
+	padding-inline-start: 0;
+	list-style-position: $list-style-position;
+	margin-bottom: $margin-between-paragraphs;
+}
+dt::before {
+	content: "- ";
+}
+dd {
+	padding-left: 1.5em;
+}
+ul {
+	list-style-type: $list-style-type;
+	ul {
+		margin-left: 1em;
+	}
+}
+
+ol {
+	&.text {
+		> li {
+			margin-bottom: 1em;
+		}
+	}
+	ol {
+		margin-left: 1em;
+		> li {
+			margin-bottom: 0;
+			counter-increment: numsubItemList;
+			&::marker {
+				content: counter(numAccordion)"."counter(numItemList)"."counter(numsubItemList)".-";
+			}
+		}
+	}
+}
+
+}
