@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: "Prueba técnica maquetador senior w2m",
+    title: "Prueba técnica maquetador senior w2m"
   },
   {
     path: 'nosotros',

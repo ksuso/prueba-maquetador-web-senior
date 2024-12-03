@@ -51,7 +51,7 @@
 	width: initial;
 	border: $button-border-width $button-border-style;
 	border-radius: $button-border-radius;
-	padding: $button-paddHeight/2  $button-paddWidth;
+	padding: calc($button-paddHeight / 2)  $button-paddWidth;
 	font-size: $button-font-size;
 	line-height: $line-height-small;
 	transition: var(--animOut-duration) ease-in-out;
