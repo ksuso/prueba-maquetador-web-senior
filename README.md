@@ -15,4 +15,4 @@ Prueba ténica para puesto de maquetador web senior usando las siguiente tecnolo
 Descargar el repositorio y desplegarlo con **ng serve** en local
 
 ## 🔗 Mi Perfil en LinkedIn
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ksuso/)
