@@ -1,27 +1,24 @@
-# PruebaTecnicaMaquetadorSeniorW2m
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+![Logo](https://ksuso.dev/banner-LinkedIn.jpg)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Prueba Técnica Maquetador Senior
 
-## Code scaffolding
+Prueba ténica para puesto de maquetador web senior usando las siguiente tecnologías:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+![image]({https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white})
+![image]({https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white})
+![image]({https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white})
+## Screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![App Screenshot](https://ksuso.dev/imgPrueba.jpg)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Demo
 
-## Running end-to-end tests
+Insert gif or link to demo
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
